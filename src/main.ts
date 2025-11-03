@@ -5,6 +5,7 @@ import { Products } from './components/base/Models/Products';
 import { Customer } from './components/base/Models/Сustomer';
 import { WebLarekApi } from './components/base/WebLarekApi';
 import { apiProducts } from './utils/data'
+import './scss/styles.scss';
 const productsModel = new Products(apiProducts.items, null);
 const basketModel = new Basket();
 const customerModel = new Customer('cash', 'example@yandex.ru', '893333333333', 'Москва, Большая Садовая, 302-бис, пятый этаж, кв. № 50.');

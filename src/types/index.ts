@@ -25,3 +25,12 @@ export interface IOrder extends IBuyer {
     total: number;
     items: string[];
 }
+
+/* Новый тип для результата оформления заказа.
+ * Сервер возвращает объект с id заказа 
+ * и общей суммой */
+
+export interface IOrderResult {
+    id: string;
+    total: number;
+  }

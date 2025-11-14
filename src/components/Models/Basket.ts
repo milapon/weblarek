@@ -1,4 +1,4 @@
-import { IProduct } from "../../../types/index.ts";
+import { IProduct } from "../../types/index.ts";
 
 export class Basket {
   protected items: IProduct[] = [];

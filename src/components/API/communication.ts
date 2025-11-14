@@ -1,6 +1,6 @@
-import { IApi, IProduct, IOrder } from "../../types";
+import { IApi, IProduct, IOrder, IOrderResult } from "../../types";
 
-export class WebLarekApi {
+export class Communication {
   protected api: IApi;
 
   constructor(api: IApi) {
@@ -11,7 +11,7 @@ export class WebLarekApi {
     return this.api.get<{ total: number; items: IProduct[] }>("/product/").then(data => data.items);
   }
 
-  sendOrder(orderData: IOrder): Promise<IOrder> {
-    return this.api.post("/order/", orderData);
-  }
+  sendOrder(orderData: IOrder): Promise<IOrderResult> {
+    return this.api.post<IOrderResult>("/order/", orderData);
+  }  
 }

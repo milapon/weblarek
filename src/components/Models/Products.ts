@@ -1,4 +1,4 @@
-import { IProduct } from "../../../types/index.ts";
+import { IProduct } from "../../types/index.ts";
 
 export class Products {
   protected items: IProduct[] = [];
@@ -17,7 +17,7 @@ export class Products {
     return this.items;
   }
 
-  getItemId(id: string) {
+  getItemById(id: string) {
     return this.items.find((item) => item.id == id);
   }
 

@@ -1,4 +1,4 @@
-import { IBuyer } from "../../../types/index.ts";
+import { IBuyer } from "../../types/index.ts";
 
 export class Customer implements IBuyer {
   payment: "cash" | "card" | "";
@@ -62,16 +62,16 @@ export class Customer implements IBuyer {
   validateForm(): { [key: string]: string } {
     const errors: { [key: string]: string } = {};
 
-    if (!this.payment || this.payment === undefined) {
+    if (!this.payment) {
       errors.payment = "Не выбран вид оплаты";
     }
-    if (!this.address || this.address === undefined) {
+    if (!this.address) {
       errors.address = "Введите адрес доставки";
     }
-    if (!this.phone || this.phone === undefined) {
+    if (!this.phone) {
       errors.phone = "Введите номер телефона";
     }
-    if (!this.email || this.email === undefined) {
+    if (!this.email) {
       errors.email = "Введите почту";
     }
     return errors;
